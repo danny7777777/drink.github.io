@@ -1,0 +1,233 @@
+*{
+    margin: 0;padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    border: none;
+    box-sizing: border-box;
+}
+.logo{
+    display: inline-block;
+    width: 213px; height: 60px;
+}
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    width: 100%;
+    background-color:#000;
+    z-index: 9999;
+    position:sticky;
+    left: 0;
+    top: 0;
+}
+.home{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../images/home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-attachment:fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    padding: 30px;
+}
+#about{
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+/*menu*/
+.imgBGRWD{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center
+}
+.img1{
+    background-image: url(../images/menu1.jpg);
+}
+.img2{
+    background-image: url(../images/menu2.jpg);
+}
+.img3{
+    background-image: url(../images/menu3.jpg);
+}
+.img4{
+    background-image: url(../images/menu4.jpg);
+}
+.img5{
+    background-image: url(../images/menu5.jpg);
+}
+
+
+.item{
+    position: relative;
+}
+.item .itemBody a{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2em;
+    opacity: 0;
+}
+.item .itemBody a:hover,.item .itemBody a:focus{
+    transition: all 1s;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+#drink{
+    clear: both;
+    padding-top:100px;
+    padding-bottom: 1em;
+}
+/*間格填色*/
+.drinkItem:nth-child(odd){
+    background-color: #f0f0f0;
+}
+.drinkItem{
+    align-items: center;
+    padding: 15px;
+}
+.drinkItem p{
+    margin: 0;
+}
+
+footer{
+    background:#6e6e6e;
+    color: #f0f0f0;
+    font-size: 14px;
+    padding: 2em;
+}
+
+.iconBAR a{
+    font-size: 32px;
+    color: #3d3d3d;
+    padding:5px;
+    margin-right: 5px;
+}
+
+.iconBAR a:hover,.iconBAR a:focus{
+    color:#1b1b1b;
+}
+
+/* google map 灰色濾鏡 */
+.googlemap iframe{
+    filter: grayscale(100%);
+    display: block;
+}
+
+/* screen */
+@media (min-width:992px){
+    .barBTN{display: none;}
+    .navBAR{
+        width: 85%;
+        height: 100px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .linkbar{
+        display: flex;
+    }
+    .linkbar a{
+        color: #fff;
+        width: 100px;
+        height: 100px;
+    }
+    .linkbar a:hover{
+        color: #FFA538;
+        border-bottom: 10px solid #FFA538;
+        padding-top: 10px;
+    }
+    /*menu 方塊酥排版*/
+    #menu .item:first-child{
+        width: 50%;
+    }
+    #menu .item:first-child~.item{
+        width: 25%;
+    }
+    #menu .item{
+        float: left;
+    }
+
+
+}
+/* mobile */
+@media (max-width:991px){
+    .barBTN,.barBTN:hover,.barBTN:focus{
+        color: #fff;
+        font-size: 32px;
+        width: 50px;
+        height: 50px;
+        margin-right: 1%;
+    }
+    .logo{
+        margin-left: 3%;
+    }
+    .navBAR{
+        width: 100%;
+        height: 100px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    .linkbar{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 100px;
+        border-bottom: 5px solid #000;
+        background-color: #fff;
+        display: none;
+    }
+    .linkbar a,.linkbar a:hover{
+        color: #000;
+        width: 100%;
+        height: 60px;
+    }
+    .linkbar a:nth-child(odd){
+        background-color: #fff7f4;
+    }
+    .linkbar a:active,.linkbar a:focus{
+        background-color: #FFA538;
+        color: #fff;
+    }
+    /* 顯示選單css */
+    .linkbarSHOW{
+        display: block;
+    }
+
+    /*menu*/
+    .item{
+        margin: 1em;
+    }
+  
+}
+
+/* 滑動視覺效果 */
+#about,#product,#map{
+    scroll-behavior: smooth;
+    scroll-margin-top:150px;
+}
+#menu{
+    scroll-behavior: smooth;
+        scroll-margin-top:240px;
+}
